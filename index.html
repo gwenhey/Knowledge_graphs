@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Graph - Gwendolyn</title>
 
-    <!-- JSON-LD Embedded for SEO -->
+    <!-- JSON-LD Embedded -->
     <script type="application/ld+json">
     {
         "@context": {
@@ -43,24 +43,15 @@
     }
     </script>
 
-    <!-- Explicit Links for Content Negotiation -->
+    <!-- Link to Turtle -->
     <link rel="alternate" type="text/turtle" href="gwendolyn.ttl">
-    <link rel="alternate" type="application/ld+json" href="gwendolyn.jsonld">
-
 </head>
 <body>
     <h1>Knowledge Graph - Gwendolyn</h1>
-    <p>This repository contains my knowledge graph in multiple formats:</p>
+    <p>This repository contains a Turtle and JSON-LD file.</p>
     <ul>
-        <li><a href="gwendolyn.ttl">View Turtle File (text/turtle)</a></li>
-        <li><a href="gwendolyn.jsonld">View JSON-LD File (application/ld+json)</a></li>
-    </ul>
-
-    <h2>Content Negotiation Information</h2>
-    <p>To access different formats, use:</p>
-    <ul>
-        <li><code>curl -H "Accept: text/turtle" https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl</code></li>
-        <li><code>curl -H "Accept: application/ld+json" https://gwenhey.github.io/Knowledge_graphs/gwendolyn.jsonld</code></li>
+        <li><a href="gwendolyn.ttl">View Turtle File</a></li>
+        <li><a href="gwendolyn.jsonld">View JSON-LD File</a></li>
     </ul>
 </body>
 </html>
