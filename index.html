@@ -45,6 +45,19 @@
 
     <!-- Link to Turtle -->
     <link rel="alternate" type="text/turtle" href="gwendolyn.ttl">
+    
+    <script>
+        // Client-side Content Negotiation
+        document.addEventListener("DOMContentLoaded", function() {
+            const acceptHeader = navigator.userAgent.includes("curl") ? "text/turtle" : navigator.userAgent;
+            if (acceptHeader.includes("text/turtle")) {
+                window.location.replace("gwendolyn.ttl");
+            } else if (acceptHeader.includes("application/ld+json")) {
+                window.location.replace("gwendolyn.jsonld");
+            }
+        });
+    </script>
+
 </head>
 <body>
     <h1>Knowledge Graph - Gwendolyn</h1>
