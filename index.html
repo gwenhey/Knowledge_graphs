@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Graph - Gwendolyn</title>
-    
-    <!-- Indicating alternate formats for content negotiation -->
-    <link rel="alternate" type="text/turtle" href="gwendolyn.ttl" title="Turtle Format">
-    <link rel="alternate" type="application/ld+json" href="gwendolyn.jsonld" title="JSON-LD Format">
-    
-    <!-- JSON-LD metadata for this page -->
+
+    <!-- JSON-LD Embedded -->
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "Knowledge Graph - Gwendolyn",
-        "description": "This repository contains Turtle and JSON-LD versions of my knowledge graph.",
-        "url": "https://gwenhey.github.io/Knowledge_graphs/",
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "mainEntity": {
-            "@id": "https://gwenhey.github.io/Knowledge_graphs/#gwendolyn",
-            "@type": ["foaf:Person", "seo:Student"],
-            "name": "Gwendolyn Heyninck",
-            "identifier": "01810915",
-            "birthDate": "2000-02-29",
-            "age": 24,
-            "affiliation": {
-                "@id": "https://www.wikidata.org/wiki/Q1137665",
-                "name": "Ghent University"
+        "@context": {
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "schema": "http://schema.org/",
+            "seo": "https://w3id.org/seo#",
+            "gnd": "https://d-nb.info/standards/elementset/gnd#"
+        },
+        "@id": "https://gwenhey.github.io/Knowledge_graphs/#gwendolyn",
+        "@type": ["foaf:Person", "seo:Student"],
+        "foaf:name": "Gwendolyn Heyninck",
+        "schema:identifier": "01810915",
+        "schema:birthDate": {
+            "@value": "2000-02-29",
+            "@type": "xsd:date"
+        },
+        "foaf:age": {
+            "@value": "24",
+            "@type": "xsd:integer"
+        },
+        "schema:affiliation": {
+            "@id": "https://www.wikidata.org/wiki/Q1137665"
+        },
+        "gnd:fieldOfStudy": {
+            "@id": "https://www.wikidata.org/wiki/Q21198"
+        },
+        "foaf:knows": [
+            {
+                "foaf:name": "Kiara Vermeersch"
             },
-            "fieldOfStudy": "Computer Science"
-        }
+            {
+                "foaf:name": "Ian Van Kets"
+            }
+        ]
     }
     </script>
+
+    <!-- Link to Turtle -->
+    <link rel="alternate" type="text/turtle" href="gwendolyn.ttl">
 </head>
 <body>
     <h1>Knowledge Graph - Gwendolyn</h1>
     <p>This repository contains a Turtle and JSON-LD file.</p>
-    <p>Access different representations:</p>
     <ul>
         <li><a href="gwendolyn.ttl">View Turtle File</a></li>
         <li><a href="gwendolyn.jsonld">View JSON-LD File</a></li>
