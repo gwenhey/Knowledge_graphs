@@ -1,0 +1,19 @@
+@base <https://github.ugent.be/gwheynin/Knowledge_graphs/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix seo: <https://w3id.org/seo#> .
+@prefix gnd: <https://d-nb.info/standards/elementset/gnd#> .
+
+<gwendolyn> a foaf:Person, seo:Student ; 
+    foaf:name "Gwendolyn Heyninck"^^xsd:string ;
+    schema:identifier "01810915"^^xsd:string ;
+    schema:birthDate "2000-02-29"^^xsd:date ;
+    foaf:age "24"^^xsd:integer ;
+    schema:affiliation <https://www.wikidata.org/wiki/Q1137665> ;
+    gnd:fieldOfStudy "Computer Science"^^xsd:string ;
+    foaf:knows [
+        foaf:name "Kiara Vermeersch"
+    ], [
+        foaf:name "Ian Van Kets"
+    ] .
