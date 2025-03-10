@@ -27,8 +27,7 @@
         "@id": "https://www.wikidata.org/wiki/Q1137665"
     },
     "gnd:fieldOfStudy": {
-        "@value": "Computer Science",
-        "@type": "xsd:string"
+        "@id": "https://www.wikidata.org/wiki/Q21198"
      }, 
     "foaf:knows": [
         {
