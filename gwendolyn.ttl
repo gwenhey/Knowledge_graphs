@@ -5,7 +5,7 @@
 @prefix seo: <https://w3id.org/seo#> .
 @prefix gnd: <https://d-nb.info/standards/elementset/gnd#> .
 
-<gwendolyn.ttl> a foaf:Person, seo:Student ; 
+<#gwendolyn> a foaf:Person, seo:Student ; 
     foaf:name "Gwendolyn Heyninck"^^xsd:string ;
     schema:identifier "01810915"^^xsd:string ;
     schema:birthDate "2000-02-29"^^xsd:date ;
