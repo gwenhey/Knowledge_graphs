@@ -11,7 +11,7 @@
     schema:birthDate "2000-02-29"^^xsd:date ;
     foaf:age "24"^^xsd:integer ;
     schema:affiliation <https://www.wikidata.org/wiki/Q1137665> ;
-    gnd:fieldOfStudy "Computer Science"^^xsd:string ;
+    gnd:fieldOfStudy <https://www.wikidata.org/wiki/Q21198> ;
     foaf:knows [
         foaf:name "Kiara Vermeersch"
     ], [
