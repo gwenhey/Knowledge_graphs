@@ -6,7 +6,7 @@
         "seo": "https://w3id.org/seo#",
         "gnd": "https://d-nb.info/standards/elementset/gnd#"
      },
-    "@id": "https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl",
+    "@id": "https://gwenhey.github.io/Knowledge_graphs/#gwendolyn",
     "@type": ["foaf:Person", "seo:Student"],
     "foaf:name": {
         "@value": "Gwendolyn Heyninck"
