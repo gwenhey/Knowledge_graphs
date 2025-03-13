@@ -1,11 +1,10 @@
-@base <https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix seo: <https://w3id.org/seo#> .
 @prefix gnd: <https://d-nb.info/standards/elementset/gnd#> .
 
-<#gwendolyn> a foaf:Person, seo:Student ; 
+<https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl#gwendolyn> a foaf:Person, seo:Student ; 
     foaf:name "Gwendolyn Heyninck"^^xsd:string ;
     schema:identifier "01810915"^^xsd:string ;
     schema:birthDate "2000-02-29"^^xsd:date ;
