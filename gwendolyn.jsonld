@@ -6,7 +6,7 @@
         "seo": "https://w3id.org/seo#",
         "gnd": "https://d-nb.info/standards/elementset/gnd#"
      },
-    "@id": "https://gwenhey.github.io/Knowledge_graphs/#gwendolyn",
+    "@id": "https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl/#gwendolyn",
     "@type": ["foaf:Person", "seo:Student"],
     "foaf:name": {
         "@value": "Gwendolyn Heyninck"
@@ -31,10 +31,10 @@
      }, 
     "foaf:knows": [
         {
-        "foaf:name": "Kiara Vermeersch"
+        "@id": "https://kiaverme.github.io/Assignment2.ttl#me" 
         },
         {
-        "foaf:name": "Ian Van Kets"
+        "@id": "https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me"
         }
     ]
     }
