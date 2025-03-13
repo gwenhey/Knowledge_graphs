@@ -12,5 +12,5 @@
     schema:affiliation <https://www.wikidata.org/wiki/Q1137665> ;
     gnd:fieldOfStudy <https://www.wikidata.org/wiki/Q21198> ;
     schema:memberOf <https://pietercolpaert.be/teaching/kg/#2024-2025> ;
-    foaf:knows <https://tobiashendrickx.be/about/#me> ,
+    foaf:knows <https://kiaverme.github.io/Assignment2.ttl> ,
                <https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me> .
