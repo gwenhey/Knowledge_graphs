@@ -17,13 +17,13 @@ ex:Person a rdfs:Class, owl:Class  ;
     
 ex:Agent a rdfs:Class, owl:Class  ;
     rdfs:label "Agent" ;
-    owl:subClassOf foaf:Agent ;
+    rdfs:subClassOf foaf:Agent ;
     rdfs:comment "A person or organization." .
 
 ex:name a rdf:Property ;
     a owl:DataTypeProperty ;
     rdfs:label "name" ;
-    rdfs:domain ex:Peson ;
+    rdfs:domain ex:Person ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of a person." ;
     rdfs:subPropertyOf foaf:name ;
@@ -50,7 +50,7 @@ ex:photographer a rdf:Property ;
     a owl:FunctionalProperty ;
     rdfs:label "photographer" ;
     rdfs:domain ex:Photo ;
-    rdfs:range rdfs:Resource ;
+    rdfs:range ex:Agent ;
     rdfs:comment "The person or entity that took the photo." ;
     rdfs:subPropertyOf foaf:maker ;
     owl:inverseOf [
