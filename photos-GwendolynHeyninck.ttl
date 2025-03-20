@@ -1,0 +1,32 @@
+@prefix ex: <http://example.org/properties/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+<https://upload.wikimedia.org/wikipedia/commons/4/46/Albert_Einstein_sticks_his_tongue.jpg> a ex:Photo ;
+    ex:title "Einstein Sticks Out His Tongue"^^xsd:string ;
+    ex:photographer <https://www.wikidata.org/wiki/Q19599569> ;
+    ex:peopleDepicted <https://www.wikidata.org/wiki/Q937> ;
+    ex:location <https://www.wikidata.org/wiki/Q21578> ;
+    ex:description "Albert Einstein sticks his tongue out for photographer Arthur Sasse after his 72nd birthday party on March 14, 1951."^^xsd:string .
+
+<https://upload.wikimedia.org/wikipedia/commons/9/9c/Aldrin_Apollo_11.jpg> a ex:Photo ;
+    ex:title "Buzz Aldrin on the Moon"^^xsd:string ;
+    ex:photographer <https://www.wikidata.org/wiki/Q1615> ;
+    ex:peopleDepicted <https://www.wikidata.org/wiki/Q2252> ;
+    ex:location <https://www.wikidata.org/wiki/Q405> ;
+    ex:description "Astronaut Buzz Aldrin, lunar module pilot, walks on the surface of the Moon near the leg of the Lunar Module (LM) Eagle during the Apollo 11 extravehicular activity (EVA)."^^xsd:string .
+    
+<https://gwenhey.github.io/Knowledge_graphs/Project_Delta.jpg> a ex:Photo ;
+    ex:title "Gwendolyn as bartender"^^xsd:string ;
+    ex:photographer <https://alphaphotography.be> ;
+    ex:peopleDepicted <https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl#gwendolyn> ;
+    ex:location <https://www.wikidata.org/wiki/Q1296> ;
+    ex:description "Gwendolyn is the bartender during Project Delta."^^xsd:string .
+
+<https://www.wikidata.org/wiki/Q937> a ex:Person;
+    ex:name "Albert Einstein" .
+
+<https://www.wikidata.org/wiki/Q2252> a ex:Person;
+    ex:name "Buzz Aldrin" .
+
+<https://gwenhey.github.io/Knowledge_graphs/gwendolyn.ttl#gwendolyn> a ex:Person;
+    ex:name "Gwendolyn Heyninck" .

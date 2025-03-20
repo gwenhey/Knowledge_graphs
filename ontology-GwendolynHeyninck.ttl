@@ -1,0 +1,86 @@
+@prefix ex: <http://example.org/properties/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:Photo a rdfs:Class, owl:Class  ;
+    rdfs:label "Photo" ;
+    owl:equivalentClass foaf:Image ;
+    rdfs:comment "A digital image capturing a person, place, or event." .
+
+ex:Person a rdfs:Class, owl:Class  ;
+    rdfs:label "Person" ;
+    owl:equivalentClass foaf:Person ;
+    rdfs:comment "A human being." .
+    
+ex:Agent a rdfs:Class, owl:Class  ;
+    rdfs:label "Agent" ;
+    owl:subClassOf foaf:Agent ;
+    rdfs:comment "A person or organization." .
+
+ex:name a rdf:Property ;
+    a owl:DataTypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain ex:Peson ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of a person." ;
+    rdfs:subPropertyOf foaf:name ;
+    owl:equivalentProperty [
+        a owl:Restriction ;
+        owl:onProperty foaf:name ;
+        owl:allValuesFrom ex:Person
+    ] .
+
+ex:title a rdf:Property ;
+    a owl:DataTypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain ex:Photo ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The title of a photo." ;
+    rdfs:subPropertyOf foaf:name ;
+    owl:equivalentProperty [
+        a owl:Restriction ;
+        owl:onProperty foaf:name ;
+        owl:allValuesFrom ex:Photo
+    ] .
+
+ex:photographer a rdf:Property ;
+    a owl:FunctionalProperty ;
+    rdfs:label "photographer" ;
+    rdfs:domain ex:Photo ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The person or entity that took the photo." ;
+    rdfs:subPropertyOf foaf:maker ;
+    owl:inverseOf [
+        a owl:Restriction ;
+        owl:onProperty foaf:made ;
+        owl:allValuesFrom ex:Photo
+    ] .
+
+ex:peopleDepicted a rdf:Property ;
+    rdfs:label "people depicted" ;
+    rdfs:domain ex:Photo ;
+    rdfs:range ex:Person ;
+    rdfs:comment "The person(s) shown in the photo." ;
+    rdfs:subPropertyOf foaf:depicts ;
+    owl:equivalentProperty [
+        a owl:Restriction ;
+        owl:onProperty foaf:depicts ;
+        owl:allValuesFrom ex:Person
+    ] .
+
+ex:location a rdf:Property ;
+    rdfs:label "location" ;
+    rdfs:domain ex:Photo ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The place where the photo was taken." .
+
+ex:description a rdf:Property ;
+    a owl:DataTypeProperty ;
+    rdfs:label "description" ;
+    rdfs:domain ex:Photo ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf rdfs:comment ;
+    rdfs:comment "A textual description of the photo." .
