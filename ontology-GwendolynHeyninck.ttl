@@ -5,23 +5,26 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-ex:Photo a rdfs:Class, owl:Class  ;
+ex:Photo a rdfs:Class ;
     rdfs:label "Photo" ;
     owl:equivalentClass foaf:Image ;
     rdfs:comment "A digital image capturing a person, place, or event." .
 
-ex:Person a rdfs:Class, owl:Class  ;
+ex:Person a rdfs:Class ;
     rdfs:label "Person" ;
     owl:equivalentClass foaf:Person ;
     rdfs:comment "A human being." .
     
-ex:Agent a rdfs:Class, owl:Class  ;
+ex:Agent a rdfs:Class ;
     rdfs:label "Agent" ;
     rdfs:subClassOf foaf:Agent ;
     rdfs:comment "A person or organization." .
 
+ex:Location a rdfs:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A geographical place." .
+
 ex:name a rdf:Property ;
-    a owl:DataTypeProperty ;
     rdfs:label "name" ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:string ;
@@ -29,7 +32,6 @@ ex:name a rdf:Property ;
     rdfs:subPropertyOf foaf:name .
 
 ex:title a rdf:Property ;
-    a owl:DataTypeProperty ;
     rdfs:label "title" ;
     rdfs:domain ex:Photo ;
     rdfs:range xsd:string ;
@@ -37,7 +39,6 @@ ex:title a rdf:Property ;
     rdfs:subPropertyOf foaf:name .
 
 ex:photographer a rdf:Property ;
-    a owl:FunctionalProperty ;
     rdfs:label "photographer" ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Agent ;
@@ -51,14 +52,13 @@ ex:peopleDepicted a rdf:Property ;
     rdfs:comment "The person(s) shown in the photo." ;
     rdfs:subPropertyOf foaf:depicts .
 
-ex:location a rdf:Property ;
-    rdfs:label "location" ;
+ex:locationPhoto a rdf:Property ;
+    rdfs:label "location of a photo" ;
     rdfs:domain ex:Photo ;
-    rdfs:range rdfs:Resource ;
+    rdfs:range ex:Location ;
     rdfs:comment "The place where the photo was taken." .
 
 ex:description a rdf:Property ;
-    a owl:DataTypeProperty ;
     rdfs:label "description" ;
     rdfs:domain ex:Photo ;
     rdfs:range xsd:string ;
