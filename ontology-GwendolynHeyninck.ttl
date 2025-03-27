@@ -26,12 +26,7 @@ ex:name a rdf:Property ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of a person." ;
-    rdfs:subPropertyOf foaf:name ;
-    owl:equivalentProperty [
-        a owl:Restriction ;
-        owl:onProperty foaf:name ;
-        owl:allValuesFrom ex:Person
-    ] .
+    rdfs:subPropertyOf foaf:name .
 
 ex:title a rdf:Property ;
     a owl:DataTypeProperty ;
@@ -39,12 +34,7 @@ ex:title a rdf:Property ;
     rdfs:domain ex:Photo ;
     rdfs:range xsd:string ;
     rdfs:comment "The title of a photo." ;
-    rdfs:subPropertyOf foaf:name ;
-    owl:equivalentProperty [
-        a owl:Restriction ;
-        owl:onProperty foaf:name ;
-        owl:allValuesFrom ex:Photo
-    ] .
+    rdfs:subPropertyOf foaf:name .
 
 ex:photographer a rdf:Property ;
     a owl:FunctionalProperty ;
@@ -52,24 +42,14 @@ ex:photographer a rdf:Property ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Agent ;
     rdfs:comment "The person or entity that took the photo." ;
-    rdfs:subPropertyOf foaf:maker ;
-    owl:inverseOf [
-        a owl:Restriction ;
-        owl:onProperty foaf:made ;
-        owl:allValuesFrom ex:Photo
-    ] .
+    rdfs:subPropertyOf foaf:maker .
 
 ex:peopleDepicted a rdf:Property ;
     rdfs:label "people depicted" ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Person ;
     rdfs:comment "The person(s) shown in the photo." ;
-    rdfs:subPropertyOf foaf:depicts ;
-    owl:equivalentProperty [
-        a owl:Restriction ;
-        owl:onProperty foaf:depicts ;
-        owl:allValuesFrom ex:Person
-    ] .
+    rdfs:subPropertyOf foaf:depicts .
 
 ex:location a rdf:Property ;
     rdfs:label "location" ;
