@@ -42,25 +42,25 @@ ex:photographer a rdf:Property ;
     rdfs:label "photographer" ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Agent ;
-    rdfs:comment "The person or entity that took the photo." ;
+    rdfs:comment "The person or entity that took a photo." ;
     rdfs:subPropertyOf foaf:maker .
 
 ex:peopleDepicted a rdf:Property ;
     rdfs:label "people depicted" ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Person ;
-    rdfs:comment "The person(s) shown in the photo." ;
+    rdfs:comment "The person(s) shown in a photo." ;
     rdfs:subPropertyOf foaf:depicts .
 
 ex:locationPhoto a rdf:Property ;
     rdfs:label "location of a photo" ;
     rdfs:domain ex:Photo ;
     rdfs:range ex:Location ;
-    rdfs:comment "The place where the photo was taken." .
+    rdfs:comment "The place where a photo was taken." .
 
 ex:description a rdf:Property ;
     rdfs:label "description" ;
     rdfs:domain ex:Photo ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf rdfs:comment ;
-    rdfs:comment "A textual description of the photo." .
+    rdfs:comment "A textual description of a photo." .
