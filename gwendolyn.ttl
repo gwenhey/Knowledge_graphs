@@ -13,4 +13,5 @@
     gnd:fieldOfStudy <https://www.wikidata.org/wiki/Q21198> ;
     schema:memberOf <https://pietercolpaert.be/teaching/kg/#2024-2025> ;
     foaf:knows <https://kiaverme.github.io/Assignment2.ttl> ,
-               <https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me> .
+               <https://ivketsgit.github.io/IanVanKets.github.io/assignment_2.ttl#me> ;
+    <http://www.w3.org/ns/solid/terms#oidcIssuerRegistrationToken> "6402d7f8-5374-49c2-ba54-d3bea32a26cc" .
